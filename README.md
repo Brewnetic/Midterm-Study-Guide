@@ -302,7 +302,7 @@ After you have successfully completed all the `// TODO:` sections in the `Midter
 
 ```console
 ==============================================
-      JAVA READINESS GAUNTLET: ACTIVATED
+      JAVA READINESS GAUNTLET: ACTIVATED      
 ==============================================
 
 Prove your midterm readiness, recruit!
@@ -333,12 +333,52 @@ Q2: What is the proper term for an error caught by the compiler BEFORE the progr
 4. Module 4: Object-Oriented Simulation (All OOP Concepts)
 5. Exit Gauntlet
 ====================================
+Select your training module (1-5): >> 2
+
+--- Module 2: Operator Obstacle Course ---
+Q1: What is the result of the modulo operator in `10 % 3`?
+>> 1
+...Signal Clear. The remainder is 1. [+1 XP]
+
+Q2: Given `String code = "Midterm";`, what is the output of `code.length()`?
+>> 7
+...Signal Clear. The `.length()` method returns the number of characters. [+1 XP]
+
+Q3: If you need to explicitly convert a `double` to an `int`, what is this action called?
+>> Casting
+...Signal Clear. This is known as explicit type casting. [+1 XP]
+
+========= TRAINING MODULES =========
+1. Module 1: Bootcamp Basics (Vars, Types, I/O)
+2. Module 2: Operator Obstacle Course (Math, Strings)
+3. Module 3: Logic & Repetition Drills (Control Flow, Arrays)
+4. Module 4: Object-Oriented Simulation (All OOP Concepts)
+5. Exit Gauntlet
+====================================
+Select your training module (1-5): >> 3
+
+--- Module 3: Logic & Repetition Drills ---
+Q1: Which logical operator means 'AND' and requires both conditions to be true?
+>> &&
+...Sequence Validated. `&&` is the logical AND operator. [+1 XP]
+
+Q2: For an array `String[] agents = {"A", "B", "C"};`, what is the value of `agents[0]`?
+>> a
+...Sequence Validated. Arrays are 0-indexed. [+1 XP]
+
+========= TRAINING MODULES =========
+1. Module 1: Bootcamp Basics (Vars, Types, I/O)
+2. Module 2: Operator Obstacle Course (Math, Strings)
+3. Module 3: Logic & Repetition Drills (Control Flow, Arrays)
+4. Module 4: Object-Oriented Simulation (All OOP Concepts)
+5. Exit Gauntlet
+====================================
 Select your training module (1-5): >> 4
 
 --- Module 4: Object-Oriented Simulation ---
-This module runs a simulation using the Agent classes you completed at the bottom of the file.
-If it runs without errors, you've passed the programming part of this challenge.
-Press Enter to initiate simulation...>>
+This module will run a simulation using the Agent classes you completed.
+If your class definitions have errors, the program may crash here. That's a sign to debug your classes!
+Press Enter to initiate simulation...>> 
 
 [SIM] Instantiating agents...
 ...[OK] Agents instantiated.
@@ -372,6 +412,6 @@ Q2: A class that cannot be instantiated and is used as a template for other clas
 Select your training module (1-5): >> 5
 
 --- GAUNTLET COMPLETE ---
-Final Readiness Score: 7 / 12 XP
-STATUS: Field Agent. Solid performance, but review weaker areas.
+Final Readiness Score: 12 / 12 XP
+STATUS: Mission Ready! You are well-prepared for the midterm.
 ```

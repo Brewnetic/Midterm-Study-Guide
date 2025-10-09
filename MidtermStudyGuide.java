@@ -39,8 +39,6 @@ public class MidtermStudyGuide {
 
     // LECTURE 1: THE 'main' METHOD
     // This is the special method where program execution begins.
-    // It is `public` (accessible from anywhere), `static` (belongs to the class, not an object),
-    // `void` (returns no value), and accepts an array of String arguments.
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int totalXP = 0;
@@ -95,11 +93,8 @@ public class MidtermStudyGuide {
         scanner.close();
     }
 
-    /**
-     * LECTURE 7: METHODS
-     * A static void method to print the main menu. It's 'void' because it performs an action (printing)
-     * but does not return any data.
-     */
+    // LECTURE 7: METHODS
+    // A static void method to print the main menu.
     public static void printMenu() {
         System.out.println("\n========= TRAINING MODULES =========");
         System.out.println("1. Module 1: Bootcamp Basics (Vars, Types, I/O)");
@@ -110,11 +105,7 @@ public class MidtermStudyGuide {
         System.out.println("====================================");
     }
 
-    /**
-     * Module 1: Covers Lectures 1-2 on Java basics, variables, and input.
-     * @param scanner A Scanner object for user input.
-     * @return The amount of XP earned in this module.
-     */
+    // Module 1: Covers Lectures 1-2 on Java basics, variables, and input.
     public static int runBootcampBasics(Scanner scanner) {
         System.out.println("\n--- Module 1: Bootcamp Basics ---");
         int xp = 0;
@@ -122,7 +113,7 @@ public class MidtermStudyGuide {
         System.out.println("Q1: Which of Java's 8 primitive types would you use to store the value `true` or `false`?");
         System.out.print(">> ");
         String answer1 = scanner.nextLine();
-        // TODO (Programmer): Check if the user's answer is "boolean". Use a case-insensitive comparison.
+        // TODO (Programmer): Check if the user's answer is "boolean".
         if (answer1.equalsIgnoreCase("your_answer_here")) {
             System.out.println("...Access Granted. `boolean` is correct. [+1 XP]");
             xp++;
@@ -145,9 +136,7 @@ public class MidtermStudyGuide {
         return xp;
     }
 
-    /**
-     * Module 2: Covers Lecture 3 on operators, formatting, and Strings.
-     */
+    // Module 2: Covers Lecture 3 on operators, formatting, and Strings.
     public static int runOperatorObstacleCourse(Scanner scanner) {
         System.out.println("\n--- Module 2: Operator Obstacle Course ---");
         int xp = 0;
@@ -156,7 +145,7 @@ public class MidtermStudyGuide {
         System.out.print(">> ");
         int answer1 = scanner.nextInt();
         scanner.nextLine();
-        // TODO (Programmer): 10 divided by 3 is 3 with a remainder of 1. The modulo operator (%) gives the remainder.
+        // TODO (Programmer): 10 divided by 3 is 3 with a remainder of 1.
         if (answer1 == 0) { // Replace 0 with the correct number
             System.out.println("...Signal Clear. The remainder is 1. [+1 XP]");
             xp++;
@@ -169,8 +158,7 @@ public class MidtermStudyGuide {
         System.out.print(">> ");
         int answer2 = scanner.nextInt();
         scanner.nextLine();
-        // LECTURE 4: STRING METHODS
-        // TODO (Programmer): The String "Midterm" has 7 characters. Check if the user's answer is 7.
+        // TODO (Programmer): The String "Midterm" has 7 characters.
         if (answer2 == 0) { // Replace 0 with the correct number
             System.out.println("...Signal Clear. The `.length()` method returns the number of characters. [+1 XP]");
             xp++;
@@ -181,7 +169,6 @@ public class MidtermStudyGuide {
         System.out.println("\nQ3: If you need to explicitly convert a `double` to an `int`, what is this action called?");
         System.out.print(">> ");
         String answer3 = scanner.nextLine();
-        // LECTURE 3: TYPE CASTING
         // TODO (Programmer): Check if the user's answer contains the word "casting".
         if (answer3.toLowerCase().contains("your_string_here")) {
             System.out.println("...Signal Clear. This is known as explicit type casting. [+1 XP]");
@@ -192,9 +179,7 @@ public class MidtermStudyGuide {
         return xp;
     }
 
-    /**
-     * Module 3: Covers Lectures 4-5 on control flow and arrays.
-     */
+    // Module 3: Covers Lectures 4-5 on control flow and arrays.
     public static int runLogicAndRepetitionDrills(Scanner scanner) {
         System.out.println("\n--- Module 3: Logic & Repetition Drills ---");
         int xp = 0;
@@ -202,8 +187,7 @@ public class MidtermStudyGuide {
         System.out.println("Q1: Which logical operator means 'AND' and requires both conditions to be true?");
         System.out.print(">> ");
         String answer1 = scanner.nextLine();
-        // LECTURE 5: LOGICAL OPERATORS
-        // TODO (Programmer): The AND operator is `&&`. Check if the user's answer equals "&&".
+        // TODO (Programmer): The AND operator is `&&`.
         if (answer1.equals("your_string_here")) {
             System.out.println("...Sequence Validated. `&&` is the logical AND operator. [+1 XP]");
             xp++;
@@ -214,7 +198,6 @@ public class MidtermStudyGuide {
         System.out.println("\nQ2: For an array `String[] agents = {\"A\", \"B\", \"C\"};`, what is the value of `agents[0]`?");
         System.out.print(">> ");
         String answer2 = scanner.nextLine();
-        // LECTURE 4: ARRAYS
         // TODO (Programmer): Arrays are 0-indexed. The element at index 0 is "A".
         if (answer2.equalsIgnoreCase("your_string_here")) {
             System.out.println("...Sequence Validated. Arrays are 0-indexed. [+1 XP]");
@@ -225,49 +208,43 @@ public class MidtermStudyGuide {
         return xp;
     }
 
-    /**
-     * Module 4: Covers Lectures 6-9 on all OOP concepts.
-     */
+    // Module 4: Covers Lectures 6-9 on all OOP concepts.
     public static int runObjectOrientedSimulation(Scanner scanner) {
         System.out.println("\n--- Module 4: Object-Oriented Simulation ---");
-        System.out.println("This module runs a simulation using the Agent classes you completed at the bottom of the file.");
-        System.out.println("If it runs without errors, you've passed the programming part of this challenge.");
+        System.out.println("This module will run a simulation using the Agent classes you completed.");
+        System.out.println("If your class definitions have errors, the program may crash here. That's a sign to debug your classes!");
         System.out.print("Press Enter to initiate simulation...");
         scanner.nextLine();
         int xp = 0;
 
-        try {
-            System.out.println("\n[SIM] Instantiating agents...");
-            RookieAgent rookie = new RookieAgent("J. Bond", "R-007", 1);
-            VeteranAgent veteran = new VeteranAgent("E. Hunt", "V-001", 5);
-            System.out.println("...[OK] Agents instantiated.");
+        // If the student's code in the class definitions is incorrect, the program will
+        // likely stop here with a compile error or a runtime error. This is expected behavior.
+        System.out.println("\n[SIM] Instantiating agents...");
+        RookieAgent rookie = new RookieAgent("J. Bond", "R-007", 1);
+        VeteranAgent veteran = new VeteranAgent("E. Hunt", "V-001", 5);
+        System.out.println("...[OK] Agents instantiated.");
 
-            System.out.println("[SIM] Assembling agent team...");
-            Agent[] team = {rookie, veteran};
-            System.out.println("...[OK] Polymorphic array created.");
+        System.out.println("[SIM] Assembling agent team...");
+        Agent[] team = {rookie, veteran};
+        System.out.println("...[OK] Polymorphic array created.");
 
-            System.out.println("[SIM] Verifying clearance levels...");
-            for (Agent agent : team) {
-                System.out.println(" > Agent " + agent.getName() + " -> " + agent.getClearanceLevel());
-            }
-            System.out.println("...[OK] Abstract methods overridden and executed.");
-
-            System.out.println("[SIM] Logging mission data...");
-            rookie.logMission("Infiltrated CS122 midterm study session.");
-            System.out.println("...[OK] Interface method executed.");
-
-            System.out.println("\n[SUCCESS] Simulation complete. Your class definitions are correct. [+3 XP]");
-            xp += 3;
-
-        } catch (Exception e) {
-            System.out.println("\n[FATAL ERROR] Simulation failed! Check your Agent class definitions for errors.");
-            return 0;
+        System.out.println("[SIM] Verifying clearance levels...");
+        for (Agent agent : team) {
+            System.out.println(" > Agent " + agent.getName() + " -> " + agent.getClearanceLevel());
         }
+        System.out.println("...[OK] Abstract methods overridden and executed.");
+
+        System.out.println("[SIM] Logging mission data...");
+        rookie.logMission("Infiltrated CS122 midterm study session.");
+        System.out.println("...[OK] Interface method executed.");
+
+        // If the code reaches this point, the simulation was successful.
+        System.out.println("\n[SUCCESS] Simulation complete. Your class definitions are correct. [+3 XP]");
+        xp += 3;
 
         System.out.println("\nQ1: Bundling data (fields) and methods together in a class, often with private fields and public getters/setters, is called...?");
         System.out.print(">> ");
         String answer1 = scanner.nextLine();
-        // LECTURE 7: ENCAPSULATION
         // TODO (Programmer): Check if the user's answer contains "encapsulation".
         if (answer1.toLowerCase().contains("your_string_here")) {
             System.out.println("...Intel Confirmed. That's encapsulation! [+1 XP]");
@@ -279,7 +256,6 @@ public class MidtermStudyGuide {
         System.out.println("\nQ2: A class that cannot be instantiated and is used as a template for other classes is known as an ________ class.");
         System.out.print(">> ");
         String answer2 = scanner.nextLine();
-        // LECTURE 8: ABSTRACTION
         // TODO (Programmer): Check if the user's answer is "abstract".
         if (answer2.equalsIgnoreCase("your_string_here")) {
             System.out.println("...Intel Confirmed. That's an abstract class! [+1 XP]");
@@ -318,8 +294,7 @@ interface MissionLog {
 
 }
 
-// TODO (Programmer): Make RookieAgent a child of Agent and have it implement MissionLog
-class RookieAgent {
+class RookieAgent extends Agent implements MissionLog {
     private int missionsCompleted;
 
     public RookieAgent(String name, String agentId, int missionsCompleted) {
@@ -338,8 +313,7 @@ class RookieAgent {
     
 }
 
-// TODO (Programmer): Make VeteranAgent a child of Agent.
-class VeteranAgent {
+class VeteranAgent extends Agent {
     private int yearsOfService;
 
     public VeteranAgent(String name, String agentId, int yearsOfService) {
