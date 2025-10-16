@@ -114,7 +114,7 @@ public class MidtermStudyGuide {
         System.out.print(">> ");
         String answer1 = scanner.nextLine();
         // TODO (Programmer): Check if the user's answer is "boolean".
-        if (answer1.equalsIgnoreCase("your_answer_here")) {
+        if (answer1.equalsIgnoreCase("boolean")) {
             System.out.println("...Access Granted. `boolean` is correct. [+1 XP]");
             xp++;
         } else {
@@ -127,7 +127,7 @@ public class MidtermStudyGuide {
         int answer2 = scanner.nextInt();
         scanner.nextLine();
         // TODO (Programmer): Check if the user entered 2.
-        if (answer2 == 0) { // Replace 0 with the correct number
+        if (answer2 == 2) { // Replace 0 with the correct number
             System.out.println("...Access Granted. Compile-time errors prevent the code from even compiling. [+1 XP]");
             xp++;
         } else {
@@ -146,7 +146,7 @@ public class MidtermStudyGuide {
         int answer1 = scanner.nextInt();
         scanner.nextLine();
         // TODO (Programmer): 10 divided by 3 is 3 with a remainder of 1.
-        if (answer1 == 0) { // Replace 0 with the correct number
+        if (answer1 == 1) { // Replace 0 with the correct number
             System.out.println("...Signal Clear. The remainder is 1. [+1 XP]");
             xp++;
         } else {
@@ -159,7 +159,7 @@ public class MidtermStudyGuide {
         int answer2 = scanner.nextInt();
         scanner.nextLine();
         // TODO (Programmer): The String "Midterm" has 7 characters.
-        if (answer2 == 0) { // Replace 0 with the correct number
+        if (answer2 == 7) { // Replace 0 with the correct number
             System.out.println("...Signal Clear. The `.length()` method returns the number of characters. [+1 XP]");
             xp++;
         } else {
@@ -170,7 +170,7 @@ public class MidtermStudyGuide {
         System.out.print(">> ");
         String answer3 = scanner.nextLine();
         // TODO (Programmer): Check if the user's answer contains the word "casting".
-        if (answer3.toLowerCase().contains("your_string_here")) {
+        if (answer3.toLowerCase().contains("casting")) {
             System.out.println("...Signal Clear. This is known as explicit type casting. [+1 XP]");
             xp++;
         } else {
@@ -188,7 +188,7 @@ public class MidtermStudyGuide {
         System.out.print(">> ");
         String answer1 = scanner.nextLine();
         // TODO (Programmer): The AND operator is `&&`.
-        if (answer1.equals("your_string_here")) {
+        if (answer1.equals("&&")) {
             System.out.println("...Sequence Validated. `&&` is the logical AND operator. [+1 XP]");
             xp++;
         } else {
@@ -199,7 +199,7 @@ public class MidtermStudyGuide {
         System.out.print(">> ");
         String answer2 = scanner.nextLine();
         // TODO (Programmer): Arrays are 0-indexed. The element at index 0 is "A".
-        if (answer2.equalsIgnoreCase("your_string_here")) {
+        if (answer2.equalsIgnoreCase("A")) {
             System.out.println("...Sequence Validated. Arrays are 0-indexed. [+1 XP]");
             xp++;
         } else {
@@ -246,7 +246,7 @@ public class MidtermStudyGuide {
         System.out.print(">> ");
         String answer1 = scanner.nextLine();
         // TODO (Programmer): Check if the user's answer contains "encapsulation".
-        if (answer1.toLowerCase().contains("your_string_here")) {
+        if (answer1.toLowerCase().contains("encapsulation")) {
             System.out.println("...Intel Confirmed. That's encapsulation! [+1 XP]");
             xp++;
         } else {
@@ -257,7 +257,7 @@ public class MidtermStudyGuide {
         System.out.print(">> ");
         String answer2 = scanner.nextLine();
         // TODO (Programmer): Check if the user's answer is "abstract".
-        if (answer2.equalsIgnoreCase("your_string_here")) {
+        if (answer2.equalsIgnoreCase("abstract")) {
             System.out.println("...Intel Confirmed. That's an abstract class! [+1 XP]");
             xp++;
         } else {
@@ -278,7 +278,8 @@ abstract class Agent {
 
     public Agent(String name, String agentId) {
         // TODO (Programmer): Initialize the `name` and `agentId` fields using `this`.
-        
+        this.name = name;
+        this.agentId = agentId;
     }
 
     public String getName() {
@@ -291,7 +292,7 @@ abstract class Agent {
 
 interface MissionLog {
     // TODO (Programmer): Declare a method `logMission` that takes a String `missionDetails` and returns void.
-
+    public void logMission(String missionDetails); 
 }
 
 class RookieAgent extends Agent implements MissionLog {
@@ -300,17 +301,22 @@ class RookieAgent extends Agent implements MissionLog {
     public RookieAgent(String name, String agentId, int missionsCompleted) {
         // `super()` calls the constructor of the parent class (Agent). It must be the first line.
         // TODO (Programmer): Call the parent constructor, passing `name` and `agentId`.
-        
+        super(name, agentId); 
         this.missionsCompleted = missionsCompleted;
     }
 
     // TODO (Programmer): Provide the implementation for the `getClearanceLevel` abstract method.
     // It should return the string "Clearance Level: Basic". Don't forget the @Override annotation.
-    
+    @Override
+    public String getClearanceLevel() {
+        return "Clearance Level: Basic";
+    }
 
     // TODO (Programmer): Provide the implementation for the `logMission` interface method.
     // It should print a message like "Rookie [Agent's Name] logged: [missionDetails]". Don't forget the @Override annotation.
-    
+    @Override
+    public void logMission(String missionDetails) {
+        System.out.println("Rookie " + name + " logged: " + missionDetails + "."); 
 }
 
 class VeteranAgent extends Agent {
@@ -318,11 +324,14 @@ class VeteranAgent extends Agent {
 
     public VeteranAgent(String name, String agentId, int yearsOfService) {
         // TODO (Programmer): Call the parent constructor with `name` and `agentId`.
-        
+        super(name, agentId); 
         this.yearsOfService = yearsOfService;
     }
 
     // TODO (Programmer): Override the `getClearanceLevel` method.
     // It should return the string "Clearance Level: Top Secret".
-    
+    @Override
+    public String getClearanceLevel() {
+        return "Clearance Level: Basic"; 
+    }
 }
